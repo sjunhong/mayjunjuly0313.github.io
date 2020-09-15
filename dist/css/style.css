@@ -113,7 +113,7 @@
 }
 
 #main {
-  background: url("../static/IMG_3406.jpg");
+  background: url("/static/IMG_3406.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

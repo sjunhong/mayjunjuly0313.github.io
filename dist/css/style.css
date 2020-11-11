@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
 * {
   font-size: 16px;
   line-height: 1.6em;
@@ -6,7 +6,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   text-decoration: none;
 }
 
@@ -113,7 +113,7 @@
 }
 
 #main {
-  background: url("../static/background.jpg");
+  background: url("../static/IMG_7693.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,13 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
-  font-size: 16px;
-  line-height: 1.6em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  color: white;
   text-decoration: none;
+}
+
+body {
+  margin: 0;
 }
 
 .leftHalf {
@@ -112,46 +118,13 @@
   background-image: linear-gradient(135deg, #007bb5 30%, #222 50%);
 }
 
-#main {
-  background: url("../static/IMG_7693.JPG");
+.main {
+  background: url("../static/background.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  color: white;
-}
-
-#mainNav {
-  background: transparent;
-}
-
-#leftNav {
-  position: fixed;
-  top: 2rem;
-  left: 7%;
-  list-style: none;
-}
-
-#rightNav {
-  position: fixed;
-  top: 2rem;
-  right: 7%;
-  list-style: none;
-}
-
-#mainNav li {
-  display: inline;
-  -webkit-transition: all 0.5s ease 0.3s;
-  transition: all 0.5s ease 0.3s;
-  padding: 0.5rem 1rem;
-}
-
-#mainNav li:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-#mainNav li a {
   color: white;
 }
 
@@ -252,6 +225,117 @@
 
 #futureList li {
   font-size: 12px;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #222;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  color: white;
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: #222;
+}
+
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__links li:hover,
+.navbar__menu li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navbar__links li {
+  padding: 8px 12px;
+  list-style: none;
+}
+
+.navbar__icon {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  display: none;
+  color: #222;
+}
+
+.navbar__menu.active,
+.navbar__links.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 8px 24px;
+  }
+  .navbar a {
+    color: #222222;
+  }
+  .navbar__links,
+  .navbar__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    display: none;
+    color: #222;
+    padding: 0;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icon {
+    display: block;
+  }
+  .navbar__links li:hover,
+  .navbar__menu li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
 }
 
 @media (max-width: 600px) {
